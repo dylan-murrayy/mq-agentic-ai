@@ -5,6 +5,20 @@
 # IBM MQ for LLM Agentic Applications
 This repository demonstrates the integration of IBM MQ with LLM Agentic Applications to support event-driven agents and Distributed Multi-Agent Systems (DMAS), an advanced evolution of traditional multi-agent systems. At the moment we have only integrated with LangGraph, a popular open-source agentic AI framework, to demonstrate our vision for MQ as async message broker. However, we hope to see this work lead to integrations with existing protocols (A2A, ACP, MCP), other agentic frameworks, and use cases.
 
+The goal is not to present a finished solution, but to explore ideas, gather feedback, and engage with organizations interested in how IBM MQ might support asynchronous, agent-based architectures. Read blog post [here]([url](https://community.ibm.com/community/user/blogs/dylan-goode/2025/05/07/ibm-mqs-and-agentic-ai)), and find out more about what AI agents are [here]([url](https://www.ibm.com/think/topics/ai-agents-vs-ai-assistants)).
+
+To support experimentation and development, IBM MQ is available free for developers ([Developer Edition]([url](https://developer.ibm.com/articles/mq-downloads/))). It can also be easily deployed in containers, making local and cloud-based testing straightforward ([Container tutorial]([url](https://developer.ibm.com/tutorials/mq-connect-app-queue-manager-containers/))).
+
+**Our primary objective with this work is to start a conversation:**
+
+- How should state and message durability be handled in agentic systems?
+- How can DMAS patterns be hardened for mission-critical environments?
+- Where does MQ’s reliability and security offer the most value?
+
+We are interested in speaking with teams working on agent-based systems, especially those where reliability, scalability, and secure messaging are priorities. We welcome feedback, ideas, and collaboration opportunities.
+
+Let us know what you think! Open an issue or discussion thread in the GitHub repository, or contact us directly at AskMessaging@uk.ibm.com
+
 # MQ for Agent State Management
 The `primary_agent` is a LangGraph-based example illustrating how IBM MQ enables real-time agent state updates. This feature leverages the MQ Publish/Subscribe pattern, ideal for scenarios where an agent’s state must reflect external events. To enable this:
 - The agent’s `env.json` `STATE_NETWORK` configuration specifies the IBM MQ topic for receiving state updates.
